@@ -1,11 +1,12 @@
 import "./Header.css";
 import SearchBar from "./Search";
+import {LOGO_URL} from "../utils/constants";
 
 const Header = () => {
     return (
       <div className="header">
         <div className="logo-search">
-          <img className="logo" src="https://png.pngtree.com/png-vector/20220706/ourmid/pngtree-food-logo-png-image_5687717.png" alt="Food Logo" />
+          <img className="logo" src={LOGO_URL} alt="Food Logo" />
           <div><SearchBar /></div>
         </div>
         <div className="navlinks">

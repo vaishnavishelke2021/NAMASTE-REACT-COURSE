@@ -1,12 +1,12 @@
 import "./RestaurantCard.css";
-// import {resObj} from "./Body.js";
+import {CDN_URL} from "../utils/constants";
 
 const RestaurantCard = (props)=> {
     const {resData} = props;
     const {cloudinaryImageId, name, cuisines, avgRating, sla} = resData?.info;
     return(
       <div className="resCard"> 
-        <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} alt="Restaurant Img" />
+        <img src={CDN_URL + cloudinaryImageId} alt="Restaurant Img" />
         <h3>{name}</h3>
         <p className= "resCard-menu">{cuisines.join(", ")}</p>
         <div className= "resCard-rating">
