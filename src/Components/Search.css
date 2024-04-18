@@ -1,0 +1,28 @@
+
+.searchBar{
+    width: 35%;
+    padding: 7px;
+    margin-left: 36px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    /* margin-bottom: 10px; */
+    /* border: none; */
+    /* outline: none; */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.041);
+}
+
+.searchBarBtn{
+    margin-left: 8px;
+    background: #161616;
+    border-radius: 4px;
+    padding: 6.8px 14px;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.searchBarBtn:hover{
+    background: #aa081c;
+    transition: all 0.3s;
+    cursor:pointer;
+}

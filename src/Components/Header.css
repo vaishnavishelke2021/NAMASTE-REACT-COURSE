@@ -2,9 +2,9 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:10px 40px;
+    padding:10px 100px;
     background-color:white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.150);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.100);
   }
   
   .logo{
@@ -25,4 +25,10 @@
     color: #aa081c;
     transition: all 0.3s;
     cursor:pointer;
+  }
+
+  .logo-search{
+    display:flex;
+    /* background-color: red; */
+    align-items: center;
   }
