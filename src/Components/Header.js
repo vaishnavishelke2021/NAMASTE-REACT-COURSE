@@ -1,8 +1,16 @@
 import "./Header.css";
 import SearchBar from "./Search";
 import {LOGO_URL} from "../utils/constants";
+import {useState} from "react";
 
 const Header = () => {
+
+  const [logBtn, setLogBtn] = useState("Login")
+
+  const handleLogin = () => {
+    logBtn === "Login" ? setLogBtn("Logout") : setLogBtn("Login");
+  };
+
     return (
       <div className="header">
         <div className="logo-search">
@@ -15,6 +23,7 @@ const Header = () => {
             <li>About Us</li>
             <li>Contact Us</li>
             <li>Cart</li>
+            <button className="logBtn" onClick={handleLogin}>{logBtn}</button>
           </ul>
         </div>
       </div>
