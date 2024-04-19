@@ -1,0 +1,38 @@
+.shimmer-wrapper{
+    padding:40px 230px;
+}
+
+.shimmer-card{
+    width: 210px;
+    margin-top: 1.5rem;
+    padding: 10px;
+}
+
+.shimmer-img{
+    width: 100%;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.090);
+    border-radius: 5px;
+}
+
+.shimmer-heading{
+    width: 80%;
+    height: 17px;
+    background: rgba(0, 0, 0, 0.090);
+    border-radius: 5px;
+}
+
+.shimmer-para{
+    width: 70%;
+    height: 9px;
+    background: rgba(0, 0, 0, 0.090);
+    border-radius: 5px;
+    line-height: 2px;
+}
+
+.shimmer-wrapper{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

@@ -2,6 +2,7 @@ import "./Body.css";
 import RestaurantCard from "./RestaurantCard";
 // import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 
 
 const Body = () => {
@@ -15,7 +16,8 @@ const Body = () => {
     const data = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=19.9974533&lng=73.78980229999999");
     const json = await data.json();
     console.log(json);
-    setListOfRes(json.data.success.cards[1].gridWidget.gridElements.infoWithStyle.restaurants)
+    const jsonData = json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants;
+    setListOfRes(jsonData);
   }
 
   const handleFilter = () => {
@@ -23,6 +25,10 @@ const Body = () => {
     setListOfRes(filteredRes); // Update state here
     console.log(filteredRes);
   };
+
+  if(listOfRes.length === 0){
+    return <Shimmer />
+  }
 
   return (
     <div className="body">
