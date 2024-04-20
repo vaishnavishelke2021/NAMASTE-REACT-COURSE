@@ -3,8 +3,7 @@ import SearchBar from "./Search";
 import {LOGO_URL} from "../utils/constants";
 import {useState} from "react";
 
-const Header = () => {
-
+const Header = ({ listOfRes, setFilteredRes }) => {
   const [logBtn, setLogBtn] = useState("Login")
 
   const handleLogin = () => {
@@ -15,7 +14,7 @@ const Header = () => {
       <div className="header">
         <div className="logo-search">
           <img className="logo" src={LOGO_URL} alt="Food Logo" />
-          <div><SearchBar /></div>
+          <div><SearchBar listOfRes={listOfRes} setFilteredRes={setFilteredRes}/></div>
         </div>
         <div className="navlinks">
           <ul>

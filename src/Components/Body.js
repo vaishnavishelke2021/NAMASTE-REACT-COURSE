@@ -3,9 +3,11 @@ import RestaurantCard from "./RestaurantCard";
 // import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import Header from "./Header";
 
 const Body = () => {
   const [listOfRes, setListOfRes] = useState([]);
+  const [filteredRes, setFilteredRes] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -13,20 +15,27 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/mapi/homepage/getCards?lat=19.9974533&lng=73.78980229999999"
+      // "https://www.swiggy.com/mapi/homepage/getCards?lat=19.9974533&lng=73.78980229999999"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
     console.log(json);
+    // const jsonData =json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants;
+
     const jsonData =
-      json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
+
     setListOfRes(jsonData);
+    setFilteredRes(jsonData);
   };
 
   const handleFilter = () => {
-    const filteredRes = listOfRes.filter((res) => res.info.avgRating > 4);
-    setListOfRes(filteredRes); // Update state here
-    console.log(filteredRes);
+    const filteredRestaurant = listOfRes.filter(
+      (res) => res.info.avgRating > 4
+    );
+    setFilteredRes(filteredRestaurant); // Update state here
+    console.log(filteredRestaurant);
   };
 
   // conditional rendering
@@ -38,6 +47,9 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
+      <Header listOfRes={listOfRes} setFilteredRes={setFilteredRes} />
+
+      <div className="bodyContainer">
       <div className="filterInfo">
         <h2 className="topHeading">Restaurants Near You </h2>
         <button className="filterBtn" onClick={handleFilter}>
@@ -45,9 +57,10 @@ const Body = () => {
         </button>
       </div>
       <div className="resCardContainer">
-        {listOfRes.map((restaurant) => (
+        {filteredRes.map((restaurant) => (
           <RestaurantCard resData={restaurant} key={restaurant.info.id} />
         ))}
+      </div>
       </div>
     </div>
   );
