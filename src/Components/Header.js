@@ -1,9 +1,10 @@
 import "./Header.css";
-import SearchBar from "./Search";
+
 import {LOGO_URL} from "../utils/constants";
 import {useState} from "react";
+import { Link } from "react-router-dom";
 
-const Header = ({ listOfRes, setFilteredRes }) => {
+const Header = () => {
   const [logBtn, setLogBtn] = useState("Login")
 
   const handleLogin = () => {
@@ -14,14 +15,21 @@ const Header = ({ listOfRes, setFilteredRes }) => {
       <div className="header">
         <div className="logo-search">
           <img className="logo" src={LOGO_URL} alt="Food Logo" />
-          <div><SearchBar listOfRes={listOfRes} setFilteredRes={setFilteredRes}/></div>
         </div>
         <div className="navlinks">
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Cart</li>
+            <li>
+              <Link style={{ textDecoration: 'none' }} to="/">Home</Link>
+            </li>
+            <li>
+              <Link style={{ textDecoration: 'none' }} to="/about">About Us</Link>
+            </li>
+            <li>
+            <Link style={{ textDecoration: 'none' }} to="/contact">Contact Us</Link>
+            </li>
+            <li>
+            <Link style={{ textDecoration: 'none' }} to="/cart">Cart</Link>
+            </li>
             <button className="logBtn" onClick={handleLogin}>{logBtn}</button>
           </ul>
         </div>

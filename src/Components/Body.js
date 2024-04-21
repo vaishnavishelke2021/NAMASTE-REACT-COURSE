@@ -3,7 +3,8 @@ import RestaurantCard from "./RestaurantCard";
 // import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
-import Header from "./Header";
+import SearchBar from "./Search";
+// import Header from "./Header";
 
 const Body = () => {
   const [listOfRes, setListOfRes] = useState([]);
@@ -47,20 +48,19 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <Header listOfRes={listOfRes} setFilteredRes={setFilteredRes} />
-
       <div className="bodyContainer">
-      <div className="filterInfo">
-        <h2 className="topHeading">Restaurants Near You </h2>
-        <button className="filterBtn" onClick={handleFilter}>
-          Top Rated Restaurants
-        </button>
-      </div>
-      <div className="resCardContainer">
-        {filteredRes.map((restaurant) => (
-          <RestaurantCard resData={restaurant} key={restaurant.info.id} />
-        ))}
-      </div>
+        <div className="filterInfo">
+          <h2 className="topHeading">Restaurants Near You </h2>
+          <button className="filterBtn" onClick={handleFilter}>
+            Top Rated Restaurants
+          </button>
+          <SearchBar listOfRes={listOfRes} setFilteredRes={setFilteredRes} />
+        </div>
+        <div className="resCardContainer">
+          {filteredRes.map((restaurant) => (
+            <RestaurantCard resData={restaurant} key={restaurant.info.id} />
+          ))}
+        </div>
       </div>
     </div>
   );

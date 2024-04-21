@@ -5,21 +5,26 @@ import App from './App';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Error from './Components/Error';
+import Body from './Components/Body';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 const appRouter = createBrowserRouter([
     {
         path: "/",
         element: <App />,
+        children: [{
+            path: "/",
+            element: <Body />
+        },
+        {
+            path: "/about",
+            element: <About />
+        },
+        {
+            path: "/contact",
+            element: <Contact />
+        }],
         errorElement: <Error />
-    },
-    {
-        path: "/about",
-        element: <About />
-    },
-    {
-        path: "/contact",
-        element: <Contact />
     }
 ])
 

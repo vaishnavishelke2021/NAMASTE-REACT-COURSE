@@ -1,4 +1,4 @@
-.shimmer-wrapper{
+.shimmer{
     padding:40px 230px;
 }
 
@@ -33,6 +33,20 @@
 .shimmer-wrapper{
     display: flex;
     gap: 1rem;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
+}
+
+.searchShimmer{
+    margin-top: 1rem;
+    padding: 1rem 0rem;
+    margin-left: 10px;
+    display: flex;
+    gap: 2rem;
+}
+
+.searchShimmer div{
+    width: 200px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.090);
 }
