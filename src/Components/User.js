@@ -27,6 +27,14 @@ class User extends React.Component{
       }
       
 
+      componentDidUpdate(){
+        console.log("component did update");
+      }
+
+      componentWillUnmount(){
+        console.log('component will unmount');
+      }
+
     
 
     render(){
