@@ -1,7 +1,7 @@
 import "./ResMenuPage.css";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
-// import { MENU_API } from "../utils/constants";
+import { MENU_API } from "../utils/constants";
 import { useParams } from "react-router-dom";
 
 const ResMenuPage = () => {
@@ -16,8 +16,7 @@ const ResMenuPage = () => {
   }, []);
 
   const fetchMenu = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6126255&lng=77.04108959999999&restaurantId=229" + resId);
+    const data = await fetch(MENU_API + resId);
     const json = await data.json();
     console.log(json);
     setResInfo(json.data);
@@ -26,10 +25,9 @@ const ResMenuPage = () => {
   if (resInfo === null) return <Shimmer />;
 
   //   const {name, cuisines, costForTwo} = resInfo?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants[2]?.info;
-
   const { itemCards } =
     resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
-  console.log(itemCards);
+    console.log(itemCards);
 
 //   function handleAddToCart(){
 //     return console.log("added to cart");
@@ -69,15 +67,16 @@ const ResMenuPage = () => {
       {/* <h2>Menu: </h2> */}
       <div className="mainMenu">
         {itemCards.map((item) => (
-          <div key={item?.card?.info?.id || Math.random()} className="menu">
+          <div key={itemCards?.item?.card?.info?.id || Math.random()} className="menu">
             {" "}
             <div className="menuInfo">
-              <h2>{item?.card?.info?.name}</h2>
-              <p> <b>Description: </b>
-                {item?.card?.info?.description || "Description not available"}
-              </p>{" "}
-              <h4>₹ {item?.card?.info?.price/100 || "Price not available"}</h4>{" "}
-              <p><b>Category: </b> {item?.card?.info?.category}</p>{" "}
+              <h3>{item?.card?.info?.name}</h3>
+              <h4 className="price">₹ {item?.card?.info?.price/100 || item?.card?.info?.defaultPrice/100 || "Price not available"}</h4>{" "}
+              <div className="ratings">
+              <p className="rating">⭐ {item?.card?.info?.ratings?.aggregatedRating?.rating}</p>
+              <p className="rating">({item?.card?.info?.ratings?.aggregatedRating?.ratingCount || "No rating available"})</p>
+              </div>
+              <p className="category"><b>Category: </b> {item?.card?.info?.category}</p>{" "}
             </div>
             <div className="menuImg">
               <img
