@@ -1,5 +1,5 @@
 import "./Body.css";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import SearchBar from "./Search";
@@ -10,6 +10,8 @@ const Body = () => {
   const [listOfRes, setListOfRes] = useState([]);
   const [filteredRes, setFilteredRes] = useState([]);
   const onlineStatus = useOnlineStatus();
+
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -45,7 +47,12 @@ const Body = () => {
   //   return <Shimmer />;
   // }
 
-  if (onlineStatus === false) return <h1 className="offlineMsg">Looks like you are offline! <br /> Check your internet connection</h1>
+  if (onlineStatus === false)
+    return (
+      <h1 className="offlineMsg">
+        Looks like you are offline! <br /> Check your internet connection
+      </h1>
+    );
 
   return listOfRes.length === 0 ? (
     <Shimmer />
@@ -61,11 +68,16 @@ const Body = () => {
         </div>
         <div className="resCardContainer">
           {filteredRes.map((restaurant) => (
-            <Link style={{ textDecoration: 'none' }}
+            <Link
+              style={{ textDecoration: "none" }}
               key={restaurant.info.id}
               to={"/restaurants/" + restaurant.info.id}
             >
-              <RestaurantCard resData={restaurant}/>
+              {restaurant.info.promoted === true ? (
+                <RestaurantCardPromoted resData={restaurant} />
+              ) : (
+                <RestaurantCard resData={restaurant} />
+              )}
             </Link>
           ))}
         </div>

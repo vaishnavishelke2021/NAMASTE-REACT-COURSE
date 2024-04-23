@@ -17,6 +17,7 @@
     object-fit: cover;
     border-radius: 7px;
     height: 120px;
+    position: relative;
 }
 
 .resCard h3{
@@ -42,4 +43,16 @@
     line-height: 16px;
     color: #161616b0;
     margin-top: 1px;
+}
+
+.labelPromoted{
+    position: absolute;
+    margin-top: 9px;
+    margin-left: 6px;
+    z-index: 100;
+    background-color: rgb(37, 129, 37);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 12px;
 }

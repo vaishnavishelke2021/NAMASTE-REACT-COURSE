@@ -1,11 +1,11 @@
 .resInfo{
-    padding:50px 300px;
+    padding:30px 300px;
     font-family: poppins;
 }
 
 .resName{
     color: #161616;
-    font-size: 2rem;
+    font-size: 1.9rem;
 }
 
 .resInfoBox{
@@ -62,75 +62,3 @@
 .nonvegBtn{
     background-color: rgba(206, 58, 58, 0.700);
 }
-
-.mainMenu{
-    margin-top: 1rem;
-}
-
-.menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.100);
-    padding: 10px 20px;
-}
-
-.menuInfo{
-    width: 60%;
-}
-.menuInfo h3{
-    color: #161616f1;
-}
-.menuInfo p{
-    color: #161616d2;
-}
-.price{
-    margin-top: -15px;
-    font-weight: 400;
-}
-.category{
-    margin-top: -10px;
-}
-.menuImg img {
-    border-radius: 10px;
-    position: relative;
-    width: 220px;
-    object-fit: cover;
-    height: 150px;
-  }
-  
-  .menuImg button {
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%); 
-  }
-  
-
-b{
-    color: #161616c7;
-}
-
-.ratings{
-    margin-top: -10px;
-    display: flex;
-    gap: 1rem;
-}
-
-/* .vegClassifier{
-    height: 15px;
-    width: 15px;
-    border: 2px solid green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2px;
-}
-
-.color{
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: green;
-} */
