@@ -1,5 +1,4 @@
 import "./Header.css";
-
 import {LOGO_URL} from "../utils/constants";
 import {useState} from "react";
 import { Link } from "react-router-dom";
@@ -47,6 +46,11 @@ const Header = () => {
             </li>
             <li>
             <Link style={{ textDecoration: 'none' }} to="/cart">Cart</Link>
+            </li>
+     
+         {/* bundling/ lazy loading another component  */}
+            <li>
+            <Link style={{ textDecoration: 'none' }} to="/grocery">Grocery</Link>
             </li>
             <button className="logBtn" onClick={handleLogin}>{logBtn}</button>
           </ul>
