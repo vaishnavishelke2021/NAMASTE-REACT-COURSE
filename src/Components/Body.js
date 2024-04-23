@@ -1,15 +1,15 @@
 import "./Body.css";
 import RestaurantCard from "./RestaurantCard";
-// import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import SearchBar from "./Search";
-// import Header from "./Header";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [listOfRes, setListOfRes] = useState([]);
   const [filteredRes, setFilteredRes] = useState([]);
+  const onlineStatus = useOnlineStatus();
 
   useEffect(() => {
     fetchData();
@@ -44,6 +44,8 @@ const Body = () => {
   // if (listOfRes.length === 0) {
   //   return <Shimmer />;
   // }
+
+  if (onlineStatus === false) return <h1 className="offlineMsg">Looks like you are offline! <br /> Check your internet connection</h1>
 
   return listOfRes.length === 0 ? (
     <Shimmer />

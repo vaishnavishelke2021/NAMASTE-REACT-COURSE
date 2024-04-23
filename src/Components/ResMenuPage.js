@@ -1,7 +1,5 @@
 import "./ResMenuPage.css";
-// import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
-// import { MENU_API } from "../utils/constants";
 import { useParams } from "react-router-dom";
 import useResMenuPage from "../utils/useResMenuPage";
 
@@ -10,7 +8,7 @@ const ResMenuPage = () => {
   const { resId } = useParams();
   const resInfo = useResMenuPage(resId); //created custom hook
 
-  
+
   if (resInfo === null) return <Shimmer />;
 
   //   const {name, cuisines, costForTwo} = resInfo?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants[2]?.info;

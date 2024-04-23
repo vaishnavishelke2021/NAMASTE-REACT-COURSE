@@ -40,3 +40,12 @@
     background: #e12e43;
     cursor: pointer;
 }
+
+.offlineMsg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40vh;
+    background-color: #e12e43;
+    color: whitesmoke;
+}

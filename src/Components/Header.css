@@ -53,3 +53,14 @@
     background: #d12035;
     transition: all 0.3s;
   }
+
+  .online {
+    color: #41B06E;
+  }
+  
+  .offline {
+    color: #FF204E;
+  }
+  
+
+  
