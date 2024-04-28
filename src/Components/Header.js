@@ -1,12 +1,14 @@
 import "./Header.css";
 import {LOGO_URL} from "../utils/constants";
-import {useState} from "react";
+import {useState, useContext} from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [logBtn, setLogBtn] = useState("Login")
   const onlineStatus = useOnlineStatus();
+  const {loggedInUser} = useContext(UserContext);
 
   const handleLogin = () => {
     logBtn === "Login" ? setLogBtn("Logout") : setLogBtn("Login");
@@ -53,6 +55,7 @@ const Header = () => {
             <Link style={{ textDecoration: 'none' }} to="/grocery">Grocery</Link>
             </li>
             <button className="logBtn" onClick={handleLogin}>{logBtn}</button>
+            <li>{loggedInUser}</li>
           </ul>
         </div>
       </div>

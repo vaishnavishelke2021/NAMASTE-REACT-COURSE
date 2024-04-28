@@ -9,7 +9,7 @@ const ResMenuPage = () => {
 
   const { resId } = useParams();
   const resInfo = useResMenuPage(resId); //created custom hook
-  const [showIndex, setShowIndex] = useState(1);
+  const [showIndex, setShowIndex] = useState(0);
 
 
   if (resInfo === null) return <Shimmer />;
