@@ -1,10 +1,11 @@
 import "./Body.css";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import SearchBar from "./Search";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfRes, setListOfRes] = useState([]);
@@ -47,6 +48,8 @@ const Body = () => {
   //   return <Shimmer />;
   // }
 
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
   if (onlineStatus === false)
     return (
       <h1 className="offlineMsg">
@@ -65,6 +68,17 @@ const Body = () => {
             Top Rated Restaurants
           </button>
           <SearchBar listOfRes={listOfRes} setFilteredRes={setFilteredRes} />
+          <div className="userNameInpContext">
+            <label htmlFor="username">Username: </label>
+            <input
+              type="text"
+              placeholder="Enter username"
+              value={loggedInUser}
+              onChange={(e) => {
+                setUserName(e.target.value);
+              }}
+            />
+          </div>
         </div>
         <div className="resCardContainer">
           {filteredRes.map((restaurant) => (

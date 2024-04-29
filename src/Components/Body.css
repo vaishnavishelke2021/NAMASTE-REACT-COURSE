@@ -49,3 +49,22 @@
     background-color: #e12e43;
     color: whitesmoke;
 }
+
+.userNameInpContext{
+    margin-left: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.userNameInpContext label{
+    margin-right: 10px;
+}
+
+.userNameInpContext input{
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.041);
+}

@@ -18,11 +18,9 @@ function App() {
   }, []);
 
   return (
-    <UserContext.Provider value={{ loggedInUser: "User" }}>
+    <UserContext.Provider value={{ loggedInUser: userName, setUserName  }}>
       <div className="app">
-        <UserContext.Provider value={{ loggedInUser: userName }}>
           <Header />
-        </UserContext.Provider>
         <Outlet />
       </div>
     </UserContext.Provider>
