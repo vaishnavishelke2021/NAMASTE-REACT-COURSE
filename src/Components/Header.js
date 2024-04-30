@@ -4,6 +4,7 @@ import {useState, useContext} from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [logBtn, setLogBtn] = useState("Login")
@@ -26,6 +27,9 @@ const Header = () => {
     </svg>
   );
 
+  // Subscibing to our store using useSelector 
+  const cartItems = useSelector((store)=> store.cart.items);
+
 
     return (
       <div className="header">
@@ -47,7 +51,7 @@ const Header = () => {
             <Link style={{ textDecoration: 'none' }} to="/contact">Contact Us</Link>
             </li>
             <li>
-            <Link style={{ textDecoration: 'none' }} to="/cart">Cart</Link>
+            <Link style={{ textDecoration: 'none' }} to="/cart">Cart ({cartItems.length} item)</Link>
             </li>
      
          {/* bundling/ lazy loading another component  */}
