@@ -1,0 +1,11 @@
+.cartContainer{
+    padding:40px 230px;
+}
+
+.itemsContainer{
+    background-color: rgba(128, 128, 128, 0.082);
+    width: 94%;
+    padding: 10px 2rem;
+    margin: 1rem auto;
+    border-radius: 5px;
+}

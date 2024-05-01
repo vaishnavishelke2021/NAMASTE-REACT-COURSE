@@ -1,9 +1,19 @@
 import "./ItemList.css";
 import { CDN_URL } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const ItemList = ({ items }) => {
   console.log(items);
   // const {id, name, price, defaultPrice} = items?.card?.info;
+
+  const dispatch = useDispatch()
+
+  const handleAddItem = (item)=>{
+    // dispatch action 
+    dispatch(addItem(item));    // this 'pizza' will go in isAction.payload     i.e. action = { payload: 'pizza'}     it is an object
+  }
+
   return (
     <div>
       <div className="mainMenu">
@@ -41,10 +51,7 @@ const ItemList = ({ items }) => {
                 alt={item?.card?.info?.name || "Menu Item Image"}
               />
               <div className="addBtnDiv">
-                <a href="#" className="addBtn">
-                  {" "}
-                  ADD{" "}
-                </a>
+                 <button onClick={() => handleAddItem(item)} className="addBtn">ADD</button>
               </div>
             </div>
           </div>
