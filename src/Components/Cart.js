@@ -1,16 +1,24 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./Cart.css";
 import ItemList from "./ItemList";
+import { clearCart } from "../utils/cartSlice";
 
 const Cart = () => {
   const cartItem = useSelector((store) => store.cart.items);
-  const isEmptyCart = cartItem.length === 0;
+
+  const dispatch = useDispatch();
+  const handleClearcart = ()=>{
+    dispatch(clearCart());
+  }
 
   return (
     <div className="cartContainer">
-      <h1>Cart</h1>
+      <div className="itemHeader">
+      <h2>Cart</h2>
+      <button className="clearCartBtn" onClick={handleClearcart}>Clear Cart</button>
+      </div>
       <div className="itemsContainer">
-        {isEmptyCart && <h2>Your cart is empty</h2>}
+        {cartItem.length === 0 && <h3>Your cart is empty! Add items to the cart</h3>}
         <ItemList items={cartItem} />
       </div>
     </div>
