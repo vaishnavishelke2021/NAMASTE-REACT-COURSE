@@ -11,7 +11,7 @@ const ItemList = ({ items }) => {
 
   const handleAddItem = (item)=>{
     // dispatch action 
-    dispatch(addItem(item));    // this 'pizza' will go in isAction.payload     i.e. action = { payload: 'pizza'}     it is an object
+    dispatch(addItem(item));    // this 'pizza' will go in action.payload     i.e. action = { payload: 'pizza'}     it is an object
   }
 
   return (
