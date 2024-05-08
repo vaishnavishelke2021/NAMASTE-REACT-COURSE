@@ -1,5 +1,7 @@
 import { sum } from "../sum";
 
+
+// test('should msg', callback fun)
 test('should give sum of 2 nums', () => {
     const result = sum(3, 4);
   
