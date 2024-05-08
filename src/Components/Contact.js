@@ -27,6 +27,7 @@ const Contact = () => {
             Name:
           </label>
           <input
+          placeholder='name'
             type="text"
             id="name"
             name="name"
