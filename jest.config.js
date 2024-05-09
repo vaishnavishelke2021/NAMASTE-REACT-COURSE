@@ -7,11 +7,6 @@ const { current } = require("@reduxjs/toolkit");
 
 module.exports = {
 
-  presets: [
-    ['babel/present-env', {targets: {node: 'current'}}],
-    ['babel/present-react', {runtime: 'automatic'}]
-  ],
-
   setupFilesAfterEnv: [
     "<rootDir>/node_modules/@testing-library/jest-dom/extend-expect.js",
   ],
