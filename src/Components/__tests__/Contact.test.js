@@ -23,3 +23,4 @@ describe("Contact Us page test cases", () => {
     expect(inputName).toBeInTheDocument();
   });
 });
+

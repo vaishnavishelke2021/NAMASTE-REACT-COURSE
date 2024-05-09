@@ -1,16 +1,15 @@
-/* body.css */
 
 .bodyContainer {
-    padding: 40px calc(20% + 2rem); /* Responsive padding based on viewport width */
-    margin: 0 auto; /* Center the container horizontally */
-    max-width: 1600px; /* Set a maximum width for larger screens */
+    padding: 40px calc(10% + 2rem); 
+    margin: 0 auto; 
+    max-width: 1600px; 
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box-shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   }
   
   .topHeading {
-    font-size: 1.5rem; /* Adjust font size for responsiveness */
+    font-size: 1.5rem; 
     margin-top: 20px;
     margin-bottom: 10px;
   }
@@ -19,7 +18,7 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    flex-wrap: wrap; /* Wrap items on smaller screens */
+    flex-wrap: wrap; 
   }
   
   .filterBtn {
@@ -31,8 +30,8 @@
     border: none;
     outline: none;
     font-size: 14px;
-    cursor: pointer; /* Indicate clickable button */
-    transition: background-color 0.2s ease; /* Smooth hover effect */
+    cursor: pointer; 
+    transition: background-color 0.2s ease; 
   }
   
   .filterBtn:hover {
@@ -46,14 +45,14 @@
     padding: 40vh;
     background-color: #e12e43;
     color: whitesmoke;
-    font-size: 1.8rem; /* Adjust font size for readability */
+    font-size: 1.8rem; 
   }
   
   .userNameInpContext {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align to the left */
-    width: 100%; /* Take full width on smaller screens */
+    justify-content: flex-start; 
+    width: 100%;
   }
   
   .userNameInpContext label {
@@ -65,14 +64,14 @@
     border-radius: 4px;
     border: 1px solid #ccc;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.041);
-    width: 85%; /* Make input full-width on smaller screens */
+    width: 85%; 
   }
   
   .resCardContainer {
     display: flex;
     /* justify-content: space-between; */
-    flex-wrap: wrap; /* Wrap cards on smaller screens */
-    gap: 1rem; /* Spacing between cards */
+    flex-wrap: wrap; 
+    gap: 1rem; 
   }
   
   /* Media queries for responsive adjustments */
@@ -86,8 +85,8 @@
     }
   
     .filterInfo {
-      flex-direction: column; /* Stack items on top of each other */
-      align-items: flex-start; /* Align to the left */
+      flex-direction: column; 
+      align-items: flex-start; 
     }
   
     .topHeading {
