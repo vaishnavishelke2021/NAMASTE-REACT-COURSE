@@ -1,0 +1,75 @@
+{
+    "id": "167674",
+    "name": "Easy Bites",
+    "cloudinaryImageId": "0264cd82d3b82490a7e75a55f06a45de",
+    "locality": "Koramangala",
+    "areaName": "Koramangala",
+    "costForTwo": "₹200 for two",
+    "cuisines": [
+        "Snacks",
+        "Fast Food",
+        "Beverages"
+    ],
+    "avgRating": 4.2,
+    "parentId": "8503",
+    "avgRatingString": "4.2",
+    "totalRatingsString": "1K+",
+    "promoted": true,
+    "adTrackingId": "cid=13356184~p=0~adgrpid=13356184#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=167674~eid=7dc3cf84-4152-44f9-87ce-aed76ce8ae81~srvts=1715409074176~collid=69584",
+    "sla": {
+        "deliveryTime": 36,
+        "lastMileTravel": 1.3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "35-40 mins",
+        "lastMileTravelString": "1.3 km",
+        "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+        "nextCloseTime": "2024-05-12 03:00:00",
+        "opened": true
+    },
+    "badges": {},
+    "isOpen": true,
+    "aggregatedDiscountInfoV2": {
+        "header": "10% OFF",
+        "shortDescriptionList": [
+            {
+                "meta": "Use TRYNEW",
+                "discountType": "Percentage",
+                "operationType": "RESTAURANT"
+            }
+        ],
+        "descriptionList": [
+            {
+                "meta": "10% off up to ₹40 | Use code TRYNEW",
+                "discountType": "Percentage",
+                "operationType": "RESTAURANT"
+            }
+        ]
+    },
+    "type": "F",
+    "badgesV2": {
+        "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+        }
+    },
+    "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+    },
+    "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+        }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {}
+}
