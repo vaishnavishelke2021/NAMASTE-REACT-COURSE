@@ -1,4 +1,5 @@
-Here are the snapshots of the project 
+# Here are the snapshots of the project 
+
 ![goyum-home](https://github.com/vaishnavishelke2021/NAMASTE-REACT-COURSE/assets/89862255/4ca353c2-0498-49b9-9eea-7cca4cfc11b1)
 
 # Getting Started with Create React App
