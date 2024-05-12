@@ -36,9 +36,9 @@ const aboutUsData = {
     },
   ],
   gallery: [
-    { id: 1, url: "images/gallery1.jpg", alt: "Restaurant Interior" },
-    { id: 2, url: "images/gallery2.jpg", alt: "Delicious Food Dish" },
-    { id: 3, url: "images/gallery3.jpg", alt: "Happy Customers Dining" },
+    { id: 1, url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIcxoCuU3kYGb7SvVD6XBMcvyOHRwHDDA53bid8885Rw&s", alt: "Restaurant Interior" },
+    { id: 2, url: "https://cdn.create.vista.com/api/media/small/224130574/stock-photo-concentrated-multiethnic-group-colleagues-working-together-new-project-modern-loft", alt: "Delicious Food Dish" },
+    { id: 3, url: "https://static.vecteezy.com/system/resources/thumbnails/030/518/066/small_2x/group-of-business-people-discussing-the-charts-and-graphs-showing-the-results-of-their-successful-teamwork-photo.jpg", alt: "Happy Customers Dining" },
   ],
 };
 
@@ -72,7 +72,7 @@ const About = () => {
         </ul>
       </div>
       <div className="gallery">
-        <h2>Our Gallery</h2>
+        <h2>Glimpse of our team</h2>
         <div className="gallery-container">
           {gallery.map((image) => (
             <img key={image.id} src={image.url} alt={image.alt} />

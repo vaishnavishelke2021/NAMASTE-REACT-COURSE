@@ -2,7 +2,8 @@
   margin: auto;
   justify-content: center;
   display: flex;
-  margin-left: 7%;
+  padding: 20px 40px;
+  /* margin-left: 7%; */
 }
 
 .bodyContainer {
@@ -26,6 +27,7 @@
 }
 
 .filterBtn {
+  margin-top: 8px;
   height: fit-content;
   background-color: #fc4100;
   padding: 8px 15px;
@@ -73,6 +75,7 @@
 
 .resCardContainer {
   display: flex;
+  /* justify-content: center; */
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -80,7 +83,8 @@
 /* Media queries for responsive adjustments */
 @media (max-width: 768px) {
   .body {
-    margin-left: 14%;
+    /* margin-left: 14%; */
+    padding: 20px;
   }
 
   .resCardContainer {
