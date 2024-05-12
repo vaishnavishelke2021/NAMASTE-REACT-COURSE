@@ -10,7 +10,15 @@
 
 .logo {
   width: 50px;
-  transform: scale(1.2);
+  transform: scale(1.4);
+}
+
+.logo-search span{
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #e06919;
+  text-shadow: -1px -1px 4px rgba(0, 0, 0, 0.119);
 }
 
 .navlinks ul {
@@ -28,7 +36,7 @@
 }
 
 .navlinks ul li:hover {
-  color: #fc4100;
+  color: #e06919;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -39,7 +47,7 @@
 }
 
 .logBtn {
-  background: #fc4100;
+  background: #e06919;
   cursor: pointer;
   padding: 7px 18px;
   border: none;

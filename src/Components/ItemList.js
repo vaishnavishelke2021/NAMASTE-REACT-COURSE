@@ -2,16 +2,23 @@ import "./ItemList.css";
 import { CDN_URL } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
+import { useState } from "react";
 
 const ItemList = ({ items }) => {
   console.log(items);
   // const {id, name, price, defaultPrice} = items?.card?.info;
 
   const dispatch = useDispatch()
+  const [notification, setNotification] = useState("");
 
   const handleAddItem = (item)=>{
     // dispatch action 
     dispatch(addItem(item));    // this 'pizza' will go in action.payload     i.e. action = { payload: 'pizza'}     it is an object
+    // Notification
+    setNotification("Added to cart");
+    setTimeout(() => {
+      setNotification("");
+    }, 3000);
   }
 
   return (
@@ -57,6 +64,7 @@ const ItemList = ({ items }) => {
           </div>
         ))}
       </div>
+      {notification && <div className="notification">{notification}</div>}
     </div>
   );
 };

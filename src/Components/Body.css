@@ -2,8 +2,7 @@
   margin: auto;
   justify-content: center;
   display: flex;
-  padding: 20px 40px;
-  /* margin-left: 7%; */
+  padding: 0px 80px;
 }
 
 .bodyContainer {
@@ -14,9 +13,7 @@
 }
 
 .topHeading {
-  font-size: 1.5rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
 }
 
 .filterInfo {
@@ -29,7 +26,7 @@
 .filterBtn {
   margin-top: 8px;
   height: fit-content;
-  background-color: #fc4100;
+  background-color: #e06919;
   padding: 8px 15px;
   border-radius: 3px;
   color: #fff;
@@ -49,7 +46,7 @@
   justify-content: center;
   align-items: center;
   padding: 40vh;
-  background-color: #fc4100;
+  background-color: #e06919;
   color: whitesmoke;
   font-size: 1.8rem;
 }
@@ -74,9 +71,11 @@
 }
 
 .resCardContainer {
+  margin-top: 1rem;
   display: flex;
   /* justify-content: center; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 1rem;
   flex-wrap: wrap;
 }
 

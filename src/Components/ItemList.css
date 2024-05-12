@@ -77,6 +77,39 @@ b{
     outline: none;
 }
 
+.notification {
+    position: fixed;
+    top: 8%;
+    right: 3%;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    animation: fade-in 0.3s ease-in-out, fade-out 0.3s ease-in-out 2.7s forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+
 @media (max-width: 1127px){
     .menuImg img{
         width: 150px;
@@ -85,6 +118,12 @@ b{
     .addBtnDiv{
         right: 22%;
         bottom: -2%;
+    }
+}
+
+@media (max-width: 1000px){
+    .notification{
+        /* right: 40%; */
     }
 }
 

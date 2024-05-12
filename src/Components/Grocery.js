@@ -1,12 +1,12 @@
-import "Grocery.css";
+import "./Grocery.css";
 
-const Gocery = ()=>{
-    return (
-        <>
-        <h1>Welcome!</h1>
-        <h3>This is our grocery store</h3>
-        </>
-    )
-}
+const Gocery = () => {
+  return (
+    <div className="GroceryStore">
+        <h1>Oops! This page is under maintenance...</h1>
+        <p>We're currently making some improvements and will be back soon. <br /> Please check back later.</p>
+    </div>
+  );
+};
 
-export default Gocery
+export default Gocery;

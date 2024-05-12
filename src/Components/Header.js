@@ -1,12 +1,13 @@
 import "./Header.css";
 import "./HamburgerMenu.css";
-import { LOGO_URL } from "../utils/constants";
+// import { LOGO_URL } from "../utils/constants";
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 import HamburgerMenu from "./HamburgerMenu";
+import logo from "../utils/logo.png";
 
 const Header = () => {
   const [logBtn, setLogBtn] = useState("Login");
@@ -47,7 +48,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-search">
-        <img className="logo" src={LOGO_URL} alt="Food Logo" />
+        <img className="logo" src={logo} alt="Food Logo" /><span>GoYum</span>
       </div>
       <div className="navlinks">
         <ul>
@@ -56,27 +57,27 @@ const Header = () => {
             {onlineStatus === true ? "Online" : "Offline"}
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/">
+            <Link style={{ textDecoration: "none", color:"#161616" }} to="/">
               Home
             </Link>
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/about">
+            <Link style={{ textDecoration: "none", color:"#161616" }} to="/about">
               About Us
             </Link>
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/contact">
+            <Link style={{ textDecoration: "none", color:"#161616" }} to="/contact">
               Contact Us
             </Link>
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/cart">
+            <Link style={{ textDecoration: "none", color:"#161616" }} to="/cart">
               {cartIcon} ({cartItems.length})
             </Link>
           </li>
           <li className="grocery">
-            <Link style={{ textDecoration: "none" }} to="/grocery">
+            <Link style={{ textDecoration: "none", color:"#161616" }} to="/grocery">
               Grocery
             </Link>
           </li>
