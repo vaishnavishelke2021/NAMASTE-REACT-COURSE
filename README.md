@@ -1,4 +1,3 @@
-# Here are the snapshots of the project 
 
 ![goyumhome](https://github.com/vaishnavishelke2021/NAMASTE-REACT-COURSE/assets/89862255/f2c13823-587e-4e8a-b750-0fc6f8d4944b)
 
