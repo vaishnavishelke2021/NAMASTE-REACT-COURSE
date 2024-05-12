@@ -21,6 +21,7 @@ const Contact = () => {
   return (
     <div className="contactContainer">
       <h1 className="contactHeader">Contact Us</h1>
+      <p className="Contactdescription">Ready to Order or Want to Learn More? Contact Us Today!</p>
       <form onSubmit={handleSubmit} className="contactForm">
         <div className="formGroup">
           <label htmlFor="name" className="formLabel">

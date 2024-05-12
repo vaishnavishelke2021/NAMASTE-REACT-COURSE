@@ -1,19 +1,28 @@
 
 .contactContainer {
-    padding: 40px ;
-    width: 100%;
+    padding: 20px 40px ;
+    /* width: 100%; */
     margin-right: 1%;
     border-radius: 5px;
+    overflow-x: hidden;
   }
   
   .contactHeader {
     color: #FC4100; 
-    font-size: 2.5rem;
     margin-bottom: 40px;
     text-align: center;
   }
+
+  .Contactdescription{
+    text-align: center;
+    margin-top: -36px;
+    color: #fc3f00ae;
+    margin-bottom: 4rem;
+  }
   
   .contactForm {
+    width: 55%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 19px;
@@ -25,18 +34,18 @@
   
   .formLabel {
     width: 120px; 
-    color: #161616; 
-    font-weight: bold;
+    color: #161616e8; 
+    font-weight: 600;
     margin-bottom: 30px;
   }
 
   .formInput::placeholder,  .formTextArea::placeholder{
     color: #16161680;
   }
-  
+
   .formInput,
   .formTextArea {
-    padding: 10px;
+    padding: 7px;
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 16px;
@@ -54,6 +63,8 @@
     border: none; 
     cursor: pointer; 
     transition: background-color 0.2s ease; 
+    width: 100%;
+    margin: auto;
   }
   
   .submitButton:hover {
