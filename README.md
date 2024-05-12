@@ -1,6 +1,11 @@
 # Here are the snapshots of the project 
 
-![goyum-home](https://github.com/vaishnavishelke2021/NAMASTE-REACT-COURSE/assets/89862255/4ca353c2-0498-49b9-9eea-7cca4cfc11b1)
+![goyumhome](https://github.com/vaishnavishelke2021/NAMASTE-REACT-COURSE/assets/89862255/f2c13823-587e-4e8a-b750-0fc6f8d4944b)
+
+![goyumresmenulist](https://github.com/vaishnavishelke2021/NAMASTE-REACT-COURSE/assets/89862255/972d6fe1-aec8-44d2-b42b-630e7c36a67a)
+
+![goyumcart](https://github.com/vaishnavishelke2021/NAMASTE-REACT-COURSE/assets/89862255/d16ee603-4ec7-4cb5-99fa-f5e15fb88217)
+
 
 # Getting Started with Create React App
 
