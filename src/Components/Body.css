@@ -1,100 +1,113 @@
+.body {
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  margin-left: 7%;
+}
 
 .bodyContainer {
-    padding: 40px calc(10% + 2rem); 
-    margin: 0 auto; 
-    max-width: 1600px; 
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .topHeading {
-    font-size: 1.5rem; 
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .filterInfo {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap; 
-  }
-  
-  .filterBtn {
-    height: fit-content;
-    background-color: #aa081c;
-    padding: 8px 15px;
-    border-radius: 3px;
-    color: #fff;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    cursor: pointer; 
-    transition: background-color 0.2s ease; 
-  }
-  
-  .filterBtn:hover {
-    background-color: #e12e43;
-  }
-  
-  .offlineMsg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40vh;
-    background-color: #e12e43;
-    color: whitesmoke;
-    font-size: 1.8rem; 
-  }
-  
-  .userNameInpContext {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; 
-    width: 100%;
-  }
-  
-  .userNameInpContext label {
-    margin-right: 10px;
-  }
-  
-  .userNameInpContext input {
-    padding: 7px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.041);
-    width: 85%; 
-  }
-  
-  .resCardContainer {
-    display: flex;
-    /* justify-content: space-between; */
-    flex-wrap: wrap; 
-    gap: 1rem; 
-  }
-  
-  /* Media queries for responsive adjustments */
-  @media (max-width: 768px) {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1600px;
+  border-radius: 5px;
+}
 
-    .resCardContainer{
-        justify-content: space-between;
-    }
-    .bodyContainer {
-      padding: 20px;
-    }
-  
-    .filterInfo {
-      flex-direction: column; 
-      align-items: flex-start; 
-    }
-  
-    .topHeading {
-      margin-top: 10px;
-    }
-  
-    .userNameInpContext {
-      margin-top: 15px;
-    }
+.topHeading {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.filterInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  height: fit-content;
+  background-color: #fc4100;
+  padding: 8px 15px;
+  border-radius: 3px;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filterBtn:hover {
+  background-color: #ff5218;
+}
+
+.offlineMsg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40vh;
+  background-color: #fc4100;
+  color: whitesmoke;
+  font-size: 1.8rem;
+}
+
+.userNameInpContext {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.userNameInpContext label {
+  margin-right: 10px;
+}
+
+.userNameInpContext input {
+  padding: 7px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.041);
+  width: 85%;
+}
+
+.resCardContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+  .body {
+    margin-left: 14%;
   }
-  
+
+  .resCardContainer {
+    justify-content: space-between;
+  }
+  .bodyContainer {
+    padding: 20px;
+  }
+
+  .filterInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0rem;
+    padding: 20px 0px;
+  }
+
+  .topHeading {
+    margin-top: 10px;
+  }
+
+  .userNameInpContext {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  .resCardContainer {
+    justify-content: center;
+  }
+}

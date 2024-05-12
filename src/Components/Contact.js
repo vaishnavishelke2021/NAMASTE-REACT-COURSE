@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import './Contact.css';
+import React, { useState } from "react";
+import "./Contact.css";
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (event) => {
@@ -12,10 +12,10 @@ const Contact = () => {
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
-      setName('');
-      setEmail('');
-      setMessage('');
-    }, 3000); 
+      setName("");
+      setEmail("");
+      setMessage("");
+    }, 3000);
   };
 
   return (
@@ -25,9 +25,9 @@ const Contact = () => {
         <div className="formGroup">
           <label htmlFor="name" className="formLabel">
             Name:
-          </label>
+          </label>{" "}
           <input
-          placeholder='name'
+            placeholder="Enter name"
             type="text"
             id="name"
             name="name"
@@ -42,6 +42,7 @@ const Contact = () => {
             Email:
           </label>
           <input
+          placeholder="Enter email"
             type="email"
             id="email"
             name="email"
@@ -56,6 +57,7 @@ const Contact = () => {
             Message:
           </label>
           <textarea
+          placeholder="Write message here..."
             id="message"
             name="message"
             className="formTextArea"
@@ -65,7 +67,7 @@ const Contact = () => {
           />
         </div>
         <button type="submit" className="submitButton">
-          {isSubmitted ? 'Submitting...' : 'Send Message'}
+          {isSubmitted ? "Submitting..." : "Send Message"}
         </button>
       </form>
       {isSubmitted && (

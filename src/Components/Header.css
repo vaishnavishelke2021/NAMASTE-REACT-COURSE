@@ -1,75 +1,87 @@
-.header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 100px;
-    background-color:white;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.100);
-  }
-  
-  .logo{
-    width: 50px;
-    transform: scale(1.2);
-  }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
 
-  .navlinks ul{
-    align-items: center;
-    display:flex;
-    gap:1.8rem;
-    list-style-type: none;
-    font-size:1.1rem; 
-    font-weight: 500;
-    color: #161616;
-  }  
+.logo {
+  width: 50px;
+  transform: scale(1.2);
+}
 
-  .navlinks ul li{
-    text-decoration: none;
-  }
-  
-  .navlinks ul li:hover{
-    color: #aa081c;
-    transition: all 0.3s;
-    cursor:pointer;
-  }
+.navlinks ul {
+  align-items: center;
+  display: flex;
+  gap: 1.8rem;
+  list-style-type: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #161616;
+}
 
-  .logo-search{
-    display:flex;
-    /* background-color: red; */
-    align-items: center;
-  }
+.navlinks ul li {
+  text-decoration: none;
+}
 
-  .logBtn{
-    background: #aa081c;
-    cursor:pointer;
-    padding: 7px 18px;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    border-radius: 3px;
-    color: white;
-  }
+.navlinks ul li:hover {
+  color: #fc4100;
+  transition: all 0.3s;
+  cursor: pointer;
+}
 
-  .logBtn:hover{
-    background: #d12035;
-    transition: all 0.3s;
-  }
+.logo-search {
+  display: flex;
+  align-items: center;
+}
 
-  .online {
-    color: #41B06E;
+.logBtn {
+  background: #fc4100;
+  cursor: pointer;
+  padding: 7px 18px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 3px;
+  color: white;
+}
+
+.logBtn:hover {
+  background: #ff531a;
+  transition: all 0.3s;
+}
+
+.online {
+  color: #41b06e;
+}
+
+.offline {
+  color: #ff204e;
+}
+
+.grocery {
+  background: #9cd7b5;
+  cursor: pointer;
+  padding: 7px 18px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 3px;
+  color: #ffffff;
+  margin-right: -12px;
+}
+
+@media (max-width: 762px){
+  .header{
+    padding: 20px;
   }
-  
-  .offline {
-    color: #FF204E;
+}
+
+@media (max-width: 1340px) {
+  .navlinks ul {
+    display: none;
   }
-  
-.grocery{
-  background: #8bcda6;
-    cursor:pointer;
-    padding: 7px 18px;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    border-radius: 3px;
-    color: #ffffff;
-    margin-right: -12px;
 }

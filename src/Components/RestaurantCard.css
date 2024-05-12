@@ -56,3 +56,12 @@
     border-radius: 3px;
     font-size: 12px;
 }
+
+@media (max-width: 520px){
+    .resCard{
+        width: 270px;
+    }
+    .resCard img{
+        height: 150px;
+    }
+}
