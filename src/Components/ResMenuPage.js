@@ -34,7 +34,7 @@ const ResMenuPage = () => {
             {resInfo?.cards[2]?.card?.card?.info?.totalRatingsString})
           </p>
           <p className="costfortwo">
-            • &nbsp;
+             &nbsp;
             {
               resInfo?.cards[2]?.card?.card?.gridElements?.infoWithStyle
                 ?.restaurants[2]?.info?.costForTwo
@@ -51,7 +51,7 @@ const ResMenuPage = () => {
         <button className="nonvegBtn">Non-veg</button>
       </div>
 
-      <hr />
+      {/* <hr /> */}
 
       {categories.map((category, index) => (
         // controlled component 

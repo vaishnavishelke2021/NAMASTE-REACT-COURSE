@@ -1,16 +1,16 @@
 .resInfo{
-    padding:30px 300px;
+    padding:40px 290px;
     font-family: poppins;
 }
 
 .resName{
     color: #161616;
-    font-size: 1.9rem;
+    font-size: 1.55rem;
 }
 
 .resInfoBox{
     background-color: rgba(255, 255, 255, 0.471);
-    padding: 20px 30px;
+    padding: 10px 30px;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.068);
     margin-top: 0.3rem;
@@ -23,7 +23,7 @@
 }
 
 .ratingCost p{
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
@@ -56,9 +56,20 @@
 }
 
 .vegBtn{
-    background-color: rgba(0, 128, 0, 0.700);
+    background-color: rgba(0, 128, 0, 0.822);
 }
 
 .nonvegBtn{
-    background-color: rgba(206, 58, 58, 0.700);
+    background-color: rgba(206, 58, 58, 0.778);
+}
+
+
+@media (max-width: 1230px){
+    .resInfo{
+        padding:40px 100px;}
+}
+
+@media (max-width: 768px){
+    .resInfo{
+        padding:40px 30px;}
 }

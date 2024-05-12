@@ -1,3 +1,5 @@
+import "Grocery.css";
+
 const Gocery = ()=>{
     return (
         <>

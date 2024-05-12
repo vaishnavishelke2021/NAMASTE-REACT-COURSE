@@ -21,13 +21,13 @@ const ItemList = ({ items }) => {
           <div key={item?.card?.info?.id || Math.random()} className="menu">
             {" "}
             <div className="menuInfo">
-              <h3>{item?.card?.info?.name}</h3>
-              <h4 className="price">
+              <h4>{item?.card?.info?.name}</h4>
+              <h5 className="price">
                 ₹{" "}
                 {item?.card?.info?.price / 100 ||
                   item?.card?.info?.defaultPrice / 100 ||
                   "Price not available"}
-              </h4>{" "}
+              </h5>{" "}
               <div className="ratings">
                 <p className="rating">
                   ⭐ {item?.card?.info?.ratings?.aggregatedRating?.rating}

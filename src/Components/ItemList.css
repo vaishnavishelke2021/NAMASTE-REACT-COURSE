@@ -1,20 +1,23 @@
 
 .mainMenu{
-    margin-top: 1rem;
+    margin-top: 0.6rem;
 }
 
 .menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.100);
-    padding: 10px 20px;
-    background-color: whitesmoke;
+    padding: 7px 25px;
+    background-color: white;
 }
 
 .menuInfo{
-    width: 60%;
+    max-width: 55%;
+}
+.menuInfo h4{
+    margin-top: 10px;
 }
 .menuInfo h3{
     color: #161616f1;
@@ -23,17 +26,19 @@
     color: #161616d2;
 }
 .price{
-    margin-top: -15px;
+    margin-top: -16px;
     font-weight: 400;
 }
 .category{
     margin-top: -10px;
+    font-size: 14px;
 }
+
 .menuImg img {
     border-radius: 10px;
-    width: 220px;
+    width: 200px;
     object-fit: cover;
-    height: 150px;
+    height: 120px;
   }
 
   .menuImg{
@@ -46,9 +51,10 @@ b{
 }
 
 .ratings{
-    margin-top: -10px;
+    margin-top: -12px;
     display: flex;
     gap: 1rem;
+    font-size: 13px;
 }
 
 .addBtnDiv{
@@ -60,13 +66,52 @@ b{
 .addBtn{
     z-index: 100;
     background-color: rgba(255, 255, 255, 0.968);
-    padding: 5px 24px;
+    padding: 4px 22px;
     color: green;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 17px;
     text-decoration: none;
     border-radius: 3px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.200);
     border: none;
     outline: none;
+}
+
+@media (max-width: 1127px){
+    .menuImg img{
+        width: 150px;
+    }
+
+    .addBtnDiv{
+        right: 22%;
+        bottom: -2%;
+    }
+}
+
+@media (max-width: 510px){
+    .menuImg img{
+        width: 90px;
+        height: 80px;
+        margin-top: -45px;
+    }
+    .addBtn{
+        font-size: 12px;
+        padding: 3px 14px;
+    }
+
+    .addBtnDiv{
+        right: 20%;
+        bottom: -2%;
+    }
+
+    .ratings{
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .category{
+        margin-top: -10px;
+        font-size: 13px;
+    }
+
 }
