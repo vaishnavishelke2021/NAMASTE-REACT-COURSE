@@ -1,0 +1,130 @@
+.footer {
+    background-color: #f6f6f6;
+    padding: 30px 40px;
+    text-align: center; /* Can be removed for left-aligned content */
+  }
+  
+  .row {
+    /* width: 100%; */
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .col {
+    width: 30%;
+    padding: 15px;
+    text-align: start;
+  }
+  
+  .footer-logo {
+    margin-bottom: 10px;
+    margin-left: -28px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .footer-logo img {
+    width: 110px;
+    height: auto;
+  }
+  
+  .footer-description {
+    font-size: 14px;
+    color: #777;
+    margin-top: -10px;
+  }
+  
+  .footer-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-list li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-list a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .footer-list a:hover {
+    color: #007bff;
+  }
+  
+  .footer-email {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #777;
+  }
+  
+  .footer-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-form input[type="email"] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1; /* Allow form to grow to fill available space */
+    margin-right: 10px;
+  }
+  
+  .footer-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .footer-form button:hover {
+    background-color: #0067cc;
+  }
+  
+  .copyright {
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    text-align: center; /* Can be removed for left-aligned copyright */
+  }
+  
+  .copyright p {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+  }
+  
+  .footer-logo span{
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-left: 1px;
+    color: #e06919;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, 0.119);
+  }
+
+  /* Media queries for responsive adjustments */
+  @media (max-width: 768px) {
+    .col {
+      width: 100%;
+    }
+
+    .footer{
+        padding: 30px 20px;
+    }
+  }
+  
